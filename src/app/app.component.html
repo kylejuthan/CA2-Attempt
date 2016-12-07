@@ -1,3 +1,6 @@
-<h1>
-  {{title}}
-</h1>
+<p>
+    <a (click)="navigate()"></a><a [routerLink]="['home']">Home</a>
+    <a (click)="navigate()"></a> | <a [routerLink]="['part-a']">Part A</a>
+    <a (click)="navigate()"></a> | <a [routerLink]="['part-b']">Part B</a>
+</p>
+<router-outlet></router-outlet>

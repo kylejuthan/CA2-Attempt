@@ -11,7 +11,7 @@ export class AppComponent {
   constructor(private router: Router) { }
 
   navigate() {
-        /*this.router.navigate(["home"]),*/
+        this.router.navigate(["home"])
         this.router.navigate(["part-a"]),
         this.router.navigate(["part-b"]);
     }

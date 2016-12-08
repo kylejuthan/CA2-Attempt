@@ -6,7 +6,7 @@ import { Router } from "@angular/router";
   templateUrl: './part-a.component.html',
   styleUrls: ['./part-a.component.css']
 })
-export class PartAComponent {
+export class PartAComponent implements OnInit{
 
   constructor(private router: Router) { }
 
@@ -16,17 +16,16 @@ export class PartAComponent {
     }
 
 
-  kilometers : number = 10;
-  miles : number = 15;
+  Celcius : number = 0;
+  Fahrenhet : number = 0;
 
-  KmToMiles() {
-    this.miles = this.kilometers * 0.621371192237;
-    //this.miles = this.kilometers * 0.621371192237;
+
+  CelciusToFahrenhet() {
+    this.Fahrenhet = this.Celcius * 9/5 + 32;
   }
 
-  MilesToKm() {
-    this.kilometers = this.miles / 0.621371192237;
-    //this.kilometers = this.miles / 0.621371192237; 
+  fahrenthetToCelcius() {
+    this.Celcius= this.Fahrenhet - 32 * 5/9
   }
 
   ngOnInit() {

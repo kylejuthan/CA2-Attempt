@@ -1,1 +1,20 @@
-<h1>BMI Calculator</h1>
+ <div class="container">
+    <h2>BMI Calculator</h2>
+    <form class="form-horizontal" name="calculate">
+      <div class="block">
+        <label class="control-label col-sm-2" for="stone">Stone</label>
+        <div class="col-sm-10">
+           <input [(ngModel)]="stone" name="stone" (keyup.enter)=" StoneToKgs()" type="number" step="any" class="form-control" >
+        <label class="control-label col-sm-2" for="pounds">Pounds</label>
+           <input [(ngModel)]="pounds" name="pounds"(keyup.enter)=" StoneAndPoundToKgs()" type="number" step="any" class="form-control" >
+        <label for="orKgs">or Kgs</label> 
+       <input [(ngModel)]="orKgs" name="orKgs"(keyup.enter)="orKgsToStoneAndPound()" type="number" step="any" class="form-control" >
+       <div class="block">
+        <label class="control-label col-sm-2" for="stone">Feet</label>
+        <div class="col-sm-10">
+           <input [(ngModel)]="feet" name="feet" (keyup.enter)="FeetToMetres()" type="number" step="any" class="form-control" >
+        <label class="control-label col-sm-2" for="pounds">Inches</label>
+           <input [(ngModel)]="inches" name="inches"(keyup.enter)="inchesToMeters()" type="number" step="any" class="form-control" >
+        <label class="control-label col-sm-2" for="orKgs">or Meters</label> 
+       <input [(ngModel)]="orMeters" name="orMeters"(keyup.enter)="feetAndInchesToMeters()" type="number" step="any" class="form-control" >
+</div>  

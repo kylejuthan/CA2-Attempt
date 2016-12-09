@@ -29,7 +29,7 @@
             <div class=col-sm-4>
                 <div class="form-group">
             <h5>Feet</h5>
-            <input [(ngModel)]="feet" name="feet" (keyup)="FeetToMetres()" type="number" step="any" class="form-control" >
+            <input [(ngModel)]="feet" name="feet" (keyup)="feetToMeters()" type="number" step="any" class="form-control" >
             </div>
             </div>
             <div class=col-sm-4>
@@ -42,10 +42,10 @@
                 <div class="form-group">
             <h5>or Meters</h5>
             <input [(ngModel)]="orMeters" name="orMeters"(keyup)="orMetersTofeetAndInches()" type="number" step="any" class="form-control" >
-                </div>
-            </div>            
+            </div>
+            </div>
         </div>
-        <button type="button" class="btn btn-primary">Calculate BMI</button>
+        <button type="button" class="btn btn-primary"  onclick="BMICalculation()">Calculate BMI</button>
         <h5>Enter your weight either in stones/ pounds or kilograms and your height either in feet/ inches or meters</h5>
         <div align=left>
             <h4>Result:</h4>

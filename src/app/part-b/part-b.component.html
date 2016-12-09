@@ -35,17 +35,25 @@
             <div class=col-sm-4>
                 <div class="form-group">
             <h5>Inches</h5>
-            <input [(ngModel)]="inches" name="inches"(keyup.enter)="inchesToMeters()" type="number" step="any" class="form-control" >
+            <input [(ngModel)]="inches" name="inches"(keyup.enter)="feetAndInchesToMeters()" type="number" step="any" class="form-control" >
             </div>
             </div>
             <div class=col-sm-4>
                 <div class="form-group">
             <h5>or Meters</h5>
-            <input [(ngModel)]="orMeters" name="orMeters"(keyup.enter)="feetAndInchesToMeters()" type="number" step="any" class="form-control" >
-            </div>
-            </div>
+            <input [(ngModel)]="orMeters" name="orMeters"(keyup.enter)="orMetersTofeetAndInches()" type="number" step="any" class="form-control" >
+                </div>
+            </div>            
         </div>
-</form>
-
+        <button type="button" class="btn btn-primary">Calculate BMI</button>
+        <h5>Enter your weight either in stones/ pounds or kilograms and your height either in feet/ inches or meters</h5>
+        <div align=left>
+            <h4>Result:</h4>
+        </div>
+        <div id="result">
+            <h2>Your BMI is 23.9, this is in the normal range</h2>
+        </div>
+    </form>
+</div>
 
  

@@ -27,7 +27,7 @@ export class PartAComponent implements OnInit{
   fahrenthetToCelcius() {
     this.Celcius= this.Fahrenhet - 32 * 5/9
   }
-
+  
   ngOnInit() {
   }
 }

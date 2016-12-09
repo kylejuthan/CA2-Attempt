@@ -22,26 +22,27 @@ export class PartBComponent{
     feet : number = 0;
     inches : number = 0;
     orMeters : number =0;
-
 StoneToKgs() {
-    this.orKgs = Math.round(this.stone * 6.35029318) ;
+    this.orKgs = this.stone * 6.35029318 ;
   }
 StoneAndPoundToKgs(){
-  this.orKgs= Math.round(this.stone * 6.35029318 + this.pounds * 0.45359237);
+  this.orKgs= this.stone * 6.35029318 + this.pounds * 0.45359237;
 }
 orKgsToStoneAndPound() {
-  this.stone = Math.round(this.orKgs *  2.2046226218/14);
-  this.pounds = Math.round(this.orKgs * 0.45359237/2.2046226218);
-   
+  
+  this.stone = Math.floor(this.orKgs * 2.2046226218/14 );
+  this.pounds = Math.round(((this.orKgs * 2.2046226218/14 ) -Math.floor(this.orKgs * 2.2046226218/14 ) )* (6.35029318 *2.2046226218 ) ) ;
 }
-FeetToMetres() {
-    this.feet = this.orMeters * .3048;
-  }
-feetAndInchesToMeters() {
-    this.orMeters = this.feet * .3048 + this.inches * .0254
-  }
-inchesToMeters() {
-  this.inches = this.orMeters * .0254
-}
+ 
+ feetToMeters(){
+   this.orMeters = this.feet * 0.3048;
+ } 
 
+feetAndInchesToMeters(){
+  this.orMeters = this.feet * 0.3048 + this.inches * 0.0254;
+}
+orMetersTofeetAndInches(){ 
+  this.feet = Math.floor(this.orMeters * 3.28084);
+  this.inches = Math.round((this.orMeters * 39.7 / 12) -  Math.floor(this.orMeters * 3.28084) * (Math.round(0.3048 *  0.0254))) ;
+}
 }

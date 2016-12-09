@@ -22,6 +22,7 @@ export class PartBComponent{
     feet : number = 0;
     inches : number = 0;
     orMeters : number =0;
+    bmi : number =0
 StoneToKgs() {
     this.orKgs = this.stone * 6.35029318 ;
   }
@@ -44,5 +45,9 @@ feetAndInchesToMeters(){
 orMetersTofeetAndInches(){ 
   this.feet = Math.floor(this.orMeters * 3.28084);
   this.inches = Math.round((this.orMeters * 39.7 / 12) -  Math.floor(this.orMeters * 3.28084) * (Math.round(0.3048 *  0.0254))) ;
+}
+BMICalculation() {
+  this.bmi = Math.round(this.orKgs/this.orMeters^2);
+  return this.bmi;
 }
 }

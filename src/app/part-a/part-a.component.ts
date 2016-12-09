@@ -19,13 +19,14 @@ export class PartAComponent implements OnInit{
   Celcius : number = 0;
   Fahrenhet : number = 0;
 
+  
 
   CelciusToFahrenhet() {
-    this.Fahrenhet = this.Celcius * 9/5 + 32;
+    this.Fahrenhet = Math.round(this.Celcius * 9/5 + 32);
   }
 
   fahrenthetToCelcius() {
-    this.Celcius= this.Fahrenhet - 32 * 5/9
+    this.Celcius= Math.round(this.Fahrenhet - 32 * 5/9);
   }
   
   ngOnInit() {
